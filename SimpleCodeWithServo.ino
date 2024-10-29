@@ -106,10 +106,11 @@ void sensorbackToCenter() {
 void moveForward() {
   digitalWrite(in1Pin, HIGH);
   digitalWrite(in2Pin, LOW);
-  analogWrite(enAPin, 255);
+  
 
   digitalWrite(in3Pin, HIGH);
   digitalWrite(in4Pin, LOW);
+  analogWrite(enAPin, 255);
   analogWrite(enBPin, 255);
 }
 
@@ -117,10 +118,11 @@ void moveForward() {
 void moveBackward(int cm) {
   digitalWrite(in1Pin, LOW);
   digitalWrite(in2Pin, HIGH);
-  analogWrite(enAPin, 255);
+
 
   digitalWrite(in3Pin, LOW);
   digitalWrite(in4Pin, HIGH);
+  analogWrite(enAPin, 255);
   analogWrite(enBPin, 255);
 
   delay(cm * 60);  // Adjust delay based on distance
@@ -131,10 +133,10 @@ void moveBackward(int cm) {
 void turnRight() {
   digitalWrite(in1Pin, LOW);
   digitalWrite(in2Pin, LOW);
-  analogWrite(enAPin, 0);
 
   digitalWrite(in3Pin, HIGH);
   digitalWrite(in4Pin, LOW);
+  analogWrite(enAPin, 0);
   analogWrite(enBPin, 255);
 
   delay(500);  // Adjust based on required turn
@@ -145,10 +147,9 @@ void turnRight() {
 void turnLeft() {
   digitalWrite(in1Pin, HIGH);
   digitalWrite(in2Pin, LOW);
-  analogWrite(enAPin, 255);
-
   digitalWrite(in3Pin, LOW);
   digitalWrite(in4Pin, LOW);
+  analogWrite(enAPin, 255);
   analogWrite(enBPin, 0);
 
   delay(500);  // Adjust based on required turn
@@ -158,9 +159,10 @@ void turnLeft() {
 void stopMotors() {
   digitalWrite(in1Pin, LOW);
   digitalWrite(in2Pin, LOW);
-  analogWrite(enAPin, 0);
+
 
   digitalWrite(in3Pin, LOW);
   digitalWrite(in4Pin, LOW);
+  analogWrite(enAPin, 0);
   analogWrite(enBPin, 0);
 }
